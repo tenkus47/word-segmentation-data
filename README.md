@@ -1,2 +1,2 @@
 # word-segmentation-data
-automating data from database.
+automating data from database
