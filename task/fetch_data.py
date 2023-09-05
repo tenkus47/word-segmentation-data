@@ -1,18 +1,16 @@
 import os
 import psycopg2
 import json
-# from dotenv import load_dotenv
-
-# load_dotenv()
 
 
 
-database = os.environ["DATABASE"]
-host = os.environ["DB_HOST"]
+
+database=os.environ["DATABASE"]
+host=os.environ["DB_HOST"]
 user=os.environ["DB_USER"]
 password=os.environ["DB_PASSWORD"]
 port=os.environ["DB_PORT"]
- 
+
 print(user)
 # db_params = {
 #     "host": host,
@@ -38,7 +36,7 @@ print(user)
 #         if version not in text_by_version:
 #                text_by_version[version] = []
           
-#         # Check if modified_text is NULL and handle it
+        # Check if modified_text is NULL and handle it
 #         if modified_text is None:
 #             text_by_version[version].append(None)
 #         else:
