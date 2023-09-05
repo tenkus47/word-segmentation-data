@@ -1,1 +1,4 @@
 asgiref==3.5.2
+dotenv
+psycopg2
+json
