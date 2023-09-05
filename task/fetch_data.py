@@ -1,13 +1,19 @@
 import os
 import psycopg2
 import json
+# from dotenv import load_dotenv
 
-database = os.environ.get("DATABASE")
-host = os.environ.get("DB_HOST")
-user=os.environ.get("DB_USER")
-password=os.environ.get("DB_PASSWORD")
-port=os.environ.get("DB_PORT")
+# load_dotenv()
 
+
+
+database = os.environ["DATABASE"]
+host = os.environ["DB_HOST"]
+user=os.environ["DB_USER"]
+password=os.environ["DB_PASSWORD"]
+port=os.environ["DB_PORT"]
+
+print(user)
 db_params = {
     "host": host,
     "database": database,
