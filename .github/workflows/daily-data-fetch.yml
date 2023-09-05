@@ -40,9 +40,3 @@ jobs:
           git add .
           git commit -m "Automated data update"
           git push
-
-      - shell: bash
-        env:
-          DATABASE: ${{ secrets.DATABASE }}
-        run: |
-          example-command "$DATABASE"
