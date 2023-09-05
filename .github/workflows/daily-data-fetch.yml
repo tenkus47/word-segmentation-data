@@ -9,16 +9,22 @@ on:
     - cron: 30 12 * * *
 
 env:
-  DATABASE: ${{secrets.DATABASE}}
-  DB_USER: ${{secrets.DB_USER}}
-  DB_PASSWORD: ${{secrets.DB_PASSWORD}}
-  DB_PORT: ${{secrets.DB_PORT}}
-  DB_HOST: ${{secrets.DB_HOST}}
+  DATABASE: ${{ secrets.DATABASE }}
+  DB_USER: ${{ secrets.DB_USER }}
+  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+  DB_PORT: ${{ secrets.DB_PORT }}
+  DB_HOST: ${{ secrets.DB_HOST }}
 
 jobs:
   fetch-data:
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-latest   
+    
+    steps:
+      - shell: bash
+        env:
+           DATABASE: ${{ secrets.DATABASE }}
+        run: |
+           example-command "$DATABASE"
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
