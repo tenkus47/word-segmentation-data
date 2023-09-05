@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [main]
   schedule: ## Schedule the job to run at 12.am daily.
-    - cron: "12 16 * 10 7"
+    - cron: 30 12 * * *
 
 jobs:
   fetch-data:
