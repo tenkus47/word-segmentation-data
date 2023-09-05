@@ -17,14 +17,7 @@ env:
 
 jobs:
   fetch-data:
-    runs-on: ubuntu-latest   
-    
-    steps:
-      - shell: bash
-        env:
-           DATABASE: ${{ secrets.DATABASE }}
-        run: |
-           example-command "$DATABASE"
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -47,3 +40,9 @@ jobs:
           git add .
           git commit -m "Automated data update"
           git push
+
+      - shell: bash
+        env:
+          DATABASE: ${{ secrets.DATABASE }}
+        run: |
+          example-command "$DATABASE"
